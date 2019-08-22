@@ -15,7 +15,7 @@ const MoneyBook = () => {
 
     return (
         <div>
-            <h1>小遣い帳</h1>
+            <Title>小遣い帳</Title>
             <table className="book">
                 <thead>
                     <tr><th>日付</th><th>項目</th><th>入金</th><th>出金</th></tr>
@@ -43,6 +43,14 @@ const MoneyBookItem = (props) => {
 }
 MoneyBookItem.propTypes = {
     book: PropTypes.object.isRequired
+}
+
+// Titleコンポーネントの定義
+const Title = (props) => {
+    return (<h1>{props.children}</h1>)
+}
+Title.propTypes = {
+    children: PropTypes.string
 }
 
 
